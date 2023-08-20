@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTime Intervals</title>
+</head>
+
+<body>
+    <button id="btn">click me to stop</button>
+    <button id="btn2" style="margin-left:50px" onclick="fnc()">Click to redirect</button>
+    <script>
+
+        let t1 = setInterval(myfnc, 2000);
+        function myfnc() {
+            console.log("Mustafizzzz....");
+        }
+
+        let b = document.getElementById("btn");
+        b.addEventListener('click', function () {
+            clearInterval(t1);
+        });
+
+        function fnc() {
+            // location.href = "https://www.googlr.com";
+            location.assign("https://www.google.com");
+            location.reload();
+
+            //location.replace("https://www.google.com");//no history
+        }
+
+
+
+    </script>
+</body>
+
+</html>

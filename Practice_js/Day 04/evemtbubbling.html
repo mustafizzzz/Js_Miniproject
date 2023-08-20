@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        body {
+            padding: 50px;
+            background-color: palevioletred;
+        }
+
+        #box1 {
+            padding: 20px;
+            background-color: orange;
+
+        }
+
+        #btn {
+            display: block;
+            margin: auto;
+            padding: 1rem;
+
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div id="box1">
+        <button id="btn">Click Me</button>
+    </div>
+
+
+    <script>
+        let div = document.getElementById("box1");
+        let btn = document.getElementById("btn");
+
+        div.addEventListener('click', divfnc, false);
+        btn.addEventListener('click', btnfnc, false);
+        document.body.addEventListener('click', bodyfnc, false);//bt default se me false rehta he bubble hone k lia
+
+        function btnfnc(event) {
+            console.log("button clicked");
+            event.stopPropagation();
+
+        }
+
+        function divfnc() {
+            console.log("div clicked");
+        }
+        function bodyfnc() {
+            console.log("body clicked");
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

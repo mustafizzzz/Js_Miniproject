@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backgroud colour change </title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 20px 100px;
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        img {
+            width: 50%;
+            margin: auto;
+
+        }
+
+        p {
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        .btn {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border: solid gray 3px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        #white {
+            background-color: #ffffff;
+        }
+
+        #Blue {
+            background-color: #0000ff;
+        }
+
+        #Yellow {
+            background-color: #ffff00;
+        }
+
+        #Orange {
+            background-color: #000000;
+        }
+
+        #color-switcher {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="color-switcher">
+        <span class="btn" id="White" onclick="changeBG('#ffffff')">
+        </span>
+        <span class="btn" id="Blue" onclick="changeBG('#0000ff')">
+        </span>
+        <span class="btn" id="Yellow" onclick="changeBG('#ffff00')">
+        </span>
+        <span class="btn" id="Orange" onclick="changeBG('#000000')">
+        </span>
+        <h1 class="alag">About Us</h1>
+        <img src="pic.jpeg">
+        <p class="alag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita maiores ea dolorum in
+            numquam fuga
+            saepe
+            laudantium amet reiciendis, esse odit doloribus, excepturi accusamus voluptatem sequi iste! Id ipsa qui
+            eaque
+            quidem ad deleniti alias veritatis vel esse obcaecati aliquam cumque, fugit facere sunt dicta debitis
+            laudantium
+            totam molestias.
+        </p>
+    </div>
+
+    <script>
+        function changeBG(color) {
+            let txt = document.getElementsByClassName('alag')
+            if (color == "#000000") {
+                for (let elm of txt) {
+                    elm.style.color = "White"
+                }
+            } else {
+                for (let elm of txt) {
+                    elm.style.color = "black"
+                }
+            }
+            document.body.style.backgroundColor = color;
+        }
+
+    </script>
+</body>
+
+</html>

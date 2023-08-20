@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting Element ID</title>
+</head>
+
+<body>
+    <h1 id="intro">Heading 1</h1>
+
+    <h2 class="test">Sample 1</h2>
+    <h2>Sample 2</h2>
+    <h2 class="test">Sample 3</h2>
+    <h2>Sample 4</h2>
+
+    <div class="div1">
+        <h2>hey 1</h2>
+        <p class="indiv">para 1</p>
+        <h2>hey 2</h2>
+        <p class="indiv">para 2</p>
+        <h2>hey 3</h2>
+        <p class="indiv">para 3</p>
+        <h2>hey 4</h2>
+        <p class="indiv">para 4</p>
+    </div>
+
+    <script>
+
+        let elm = document.getElementById("intro");
+        console.log(elm);
+        elm.innerHTML = "<h1>Hellow world by ID</h1>";
+        let elm2 = document.getElementsByClassName("test");
+        console.log(elm2);
+        console.log("changing the internal by class:\n");
+        for (let i = 0; i < elm2.length; i++) {
+            elm2[i].innerHTML = "<p>Change by Class</p>";
+
+        }
+
+        console.log("Chnage by Tag name");
+
+        // let elm3 = document.getElementsByTagName("h2");
+        // for (let i = 0; i < elm2.length; i++) {
+        //     elm3[i].innerHTML = "<h2>Change by Tagname</h2>";
+
+        // }
+
+        // let elm4 = document.getElementById("div1");
+        // let elm5 = elm4.getElementsByTagName("h2");
+
+        // for (let i = 0; i < elm5.length; i++) {
+        //     elm5[i].innerHTML = "Change by Nested inner";
+
+        // }
+
+        //queryselector
+
+
+        let q = document.querySelectorAll("p.indiv");
+        console.log(q);
+        for (let i = 0; i < q.length; i++) {
+            q[i].innerHTML = "<p>Change by Query</p>";
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

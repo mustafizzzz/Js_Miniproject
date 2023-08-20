@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Form Events</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <input type="text" id="Myinput">
+    <script>
+        let prt = document.getElementById("Myinput");
+        prt.addEventListener('focus', myfnc1);
+        prt.addEventListener('blur', myfnc2);
+        prt.addEventListener('input', function () {
+            console.log(this.value);
+        });
+
+        function myfnc1() {
+            prt.style.background = "Yellow";
+
+        }
+        function myfnc2() {
+            prt.style.background = "red";
+
+        }
+    </script>
+</body>
+
+</html>
